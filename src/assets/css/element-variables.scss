@@ -1,9 +1,85 @@
-/* 改变主题色变量 */
+
+/* 1. 核心主题色变量（保留你的原始配置，低饱和绿贴合简约风）
+   如需更换简约色调，可替换为：
+   低饱和蓝：#409EFF
+   浅灰蓝：#5470c6
+   暖浅棕：#e8a87c
+*/
 $--color-primary: #00c292 !default;
 $--color-success: #67c23a !default;
 $--color-warning: #e6a23c !default;
 $--color-danger: #f56c6c !default;
 $--color-info: #909399 !default;
-/* 改变 icon 字体路径变量，必需 */
+
+/* 2. 简约风视觉核心配置（关键优化：去臃肿、提精致感） */
+// 边框配置：细边框+小圆角，摆脱旧版生硬感
+$--border-width-base: 1px !default; // 基础细边框
+$--border-width-medium: 1px !default; // 中等边框（统一为细边框）
+$--border-radius-base: 4px !default; // 基础小圆角（简约风标志性配置）
+$--border-radius-small: 2px !default; // 小控件圆角（如单选框、复选框）
+$--border-radius-large: 6px !default; // 大容器圆角（如卡片、弹窗）
+
+// 阴影配置：轻量低透明度，仅保留层级感，不沉重
+$--box-shadow-base: 0 2px 8px rgba(0, 0, 0, 0.06) !default; // 基础轻阴影
+$--box-shadow-dark: 0 4px 12px rgba(0, 0, 0, 0.08) !default; // 深色场景阴影
+$--box-shadow-light: 0 1px 3px rgba(0, 0, 0, 0.04) !default; // 轻量场景阴影（如按钮hover）
+
+// 字体配置：无衬线字体+适中大小，现代清晰
+$--font-family: "Helvetica Neue", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif !default;
+$--font-size-extra-large: 18px !default;
+$--font-size-large: 16px !default;
+$--font-size-base: 14px !default; // 基础字体大小
+$--font-size-small: 13px !default;
+$--font-size-extra-small: 12px !default;
+$--line-height-base: 1.5 !default; // 舒适行高，提升可读性
+$--font-weight-primary: 500 !default; // 中等加粗，替代粗体更精致
+
+// 间距配置：精简冗余间距，布局紧凑清爽
+$--padding-base: 8px !default;
+$--padding-xs: 4px !default;
+$--padding-sm: 6px !default;
+$--padding-md: 12px !default;
+$--padding-lg: 16px !default;
+$--padding-xl: 24px !default;
+$--margin-base: 8px !default;
+$--margin-xs: 4px !default;
+$--margin-sm: 6px !default;
+$--margin-md: 12px !default;
+$--margin-lg: 16px !default;
+$--margin-xl: 24px !default;
+
+/* 3. 控件样式优化（强化简约风，优化交互体验） */
+// 按钮样式：精简内边距+小圆角
+$--button-padding-base: 4px 16px !default;
+$--button-padding-large: 6px 16px !default;
+$--button-padding-small: 2px 12px !default;
+$--button-border-radius-base: $--border-radius-base !default;
+
+// 输入框样式：精简内边距+浅边框
+$--input-height-base: 32px !default;
+$--input-height-large: 36px !default;
+$--input-height-small: 28px !default;
+$--input-padding-horizontal: 11px !default;
+
+// 菜单样式：精简间距，适配侧边栏简约风
+$--menu-item-height: 44px !default;
+$--menu-item-padding: 0 20px !default;
+$--submenu-item-height: 36px !default;
+
+/* 替换为方案1：个人财务管理系统专属配色（低饱和蓝，体现专业/信任感） */
+$--color-primary: #3b82f6 !default; // 主色调：低饱和蓝（核心按钮/选中态/强调色）
+$--color-success: #10b981 !default; // 成功色：浅绿（对应「收入」「对账成功」等场景）
+$--color-warning: #f59e0b !default; // 警告色：暖黄（对应「支出」「待确认」等场景）
+$--color-danger: #ef4444 !default; // 危险色：浅红（对应「超支」「异常账单」等场景）
+$--color-info: #909399 !default; // 信息色：浅灰（保持不变，用于辅助文字/边框）
+
+/* 其他简约风配置（边框/阴影/字体等）无需修改，保留原有代码即可 */
+$--border-width-base: 1px !default;
+$--border-radius-base: 4px !default;
+$--box-shadow-base: 0 2px 8px rgba(0, 0, 0, 0.06) !default;
+$--font-family: "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif !default;
+/* 4. 必需配置：Icon 字体路径（不可删除，确保图标正常显示） */
 $--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+/* 5. 引入 Element UI 主题核心文件（不可删除，使配置生效） */
 @import "~element-ui/packages/theme-chalk/src/index";

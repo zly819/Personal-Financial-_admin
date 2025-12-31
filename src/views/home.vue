@@ -39,6 +39,11 @@ export default {
   height: 100%;
   min-height: 500px;
   text-align: center;
+  /* 新增：背景图核心配置 */
+  background-image: url("~@/assets/img/首页.png"); /* 路径对应你的首页图片存放位置，务必确认图片名称一致 */
+  background-size: cover; /* 让背景图覆盖整个容器，保持比例不变形 */
+  background-repeat: no-repeat; /* 禁止背景图重复平铺 */
+  background-position: center center; /* 让背景图水平+垂直居中 */
   .main-text{
     font-size: 38px;
     font-weight: bold;
